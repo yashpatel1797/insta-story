@@ -40,6 +40,10 @@ Run tests in interactive mode:
 npm run test:e2e
 ```
 
+<img src="src/assets/insta-1.PNG" alt="insta-1" />
+<img src="src/assets/insta-2.PNG" alt="insta-2" />
+
+
 ## Design choice and optimization
 - Component Architecture: Modular components (StoryList, StoryViewer, StoryProgress) with a custom hook (useStoryProgress) for progress state management.
 - Efficient State Management: React hooks for minimal re-renders and optimized state handling.
@@ -52,3 +56,4 @@ npm run test:e2e
 - Performance: Implement image preloading, virtual scrolling, and progressive image loading for smoother transitions.
 
 - Features: Add story creation, media uploads, interactions (likes, replies), and story analytics.
+
