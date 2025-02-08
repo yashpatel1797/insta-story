@@ -29,7 +29,6 @@ const InstagramStories: React.FC<InstagramStoriesProps> = ({ stories }) => {
   const { progressBarsRef, pauseProgress, resumeProgress } = useStoryProgress(
     activeStory,
     isPlaying,
-    stories,
     handleStoryComplete
   );
 

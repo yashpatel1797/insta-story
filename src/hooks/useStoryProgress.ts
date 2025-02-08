@@ -1,12 +1,11 @@
 import { useEffect, useRef } from 'react';
-import { ActiveStory, Story } from '../types';
+import { ActiveStory } from '../types';
 
 const STORY_DURATION = 5000;
 
 export const useStoryProgress = (
   activeStory: ActiveStory | null,
   isPlaying: boolean,
-  stories: Story[],
   onStoryComplete: () => void
 ) => {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
