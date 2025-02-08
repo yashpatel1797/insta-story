@@ -1,0 +1,194 @@
+.stories-container {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .stories-list {
+    display: flex;
+    overflow-x: auto;
+    padding: 16px 8px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+  }
+  
+  .stories-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .story-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .story-avatar-container {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  }
+  
+  .story-avatar {
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+  }
+  
+  .story-username {
+    margin-top: 4px;
+    font-size: 12px;
+    max-width: 64px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+  }
+  
+  .story-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .progress-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    z-index: 1;
+    display: flex;
+    gap: 4px;
+    padding: 8px;
+  }
+  .progress-bar-container {
+    flex: 1;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #fff;
+    width: 0%;
+    transition: width 5s linear;
+  }
+  
+  .progress-bar.completed {
+    width: 100%;
+  }
+  
+  .progress-bar.active {
+    transition: width 5s linear;
+  }
+  .story-content {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .story-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .story-user-info {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .story-user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 8px;
+  }
+  
+  .user-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .story-user-name {
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .close-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .story-viewer {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Mobile Optimizations */
+  @media (max-width: 768px) {
+    .story-avatar-container {
+      width: 56px;
+      height: 56px;
+    }
+  
+    .story-username {
+      max-width: 56px;
+    }
+  
+    .story-user-info {
+      top: 12px;
+      left: 12px;
+    }
+  
+    .close-button {
+      top: 12px;
+      right: 12px;
+    }
+  }
